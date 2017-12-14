@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "UploadFile";
+    string fileName = ViewBag.Filename;
+}
+
+<h2>UploadFile</h2>
+
+@using (Html.BeginForm("UploadFile", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <div class="row">
+        @Html.TextBox("file", "", new { type = "file" }) <br />
+
+        <input type="submit" value="Upload" />
+
+        @ViewBag.Message
+
+    </div>
+
+    <div class="row">
+        
+
+        <input type="button" value="Save file to db" 
+               onclick="location.href='@Url.Action("SaveFileToDb", "Upload", new { fileName = @fileName })'" />
+
+    </div>
+}

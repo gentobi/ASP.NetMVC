@@ -26,19 +26,29 @@
     <div class="col-md-4">
         <h2>Web Hosting</h2>
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p> 
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
         <button id="btn-Test">Click Me</button>
+    </div>
+    <div class="col-md-4">
+        <button id="btn-file-upload">File upload</button>
     </div>
 </div>
 @section scripts
 {
     <script type="text/javascript">
-        $( document ).ready(function() {
-            $("#btn-Test").click(function() {
+        $(document).ready(function () {
+            $("#btn-Test").click(function () {
                 window.location.assign("/Home/Contact");
+            });
+            $("#btn-file-upload").click(function() {
+                window.location.assign("/Upload/UploadFile");
             });
         });
     </script>
-        
-    
+
+
 }
